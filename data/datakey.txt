@@ -1,0 +1,24 @@
+road_rules.json
+   - Use later for:
+   - RAG context for Vehicle Agent & Traffic Light Agent
+   - Features like speed limit, lane count
+   - Possible rule-based features
+
+incident_cases.json
+   - NLP classification (severity prediction, incident type)
+   - RAG for Incident Detection Agent
+   - Evaluation metrics (you have ground truth labels: severity_label, cause)
+
+traffic_policies.json
+   - RAG for Traffic Light Agent
+   - Conditioning decisions on applicable_severity / related_incident_types
+
+emergency_protocols.json
+   - RAG for Incident Detection Agent
+   - “Next actions” recommendations
+   - Also good text for semantic retrieval
+
+graph_data.json
+   - KG queries in Traffic Light Agent (find nearest hospital, alternate routes, etc.)
+   - Basic graph algorithms (neighbors, paths)- 
+

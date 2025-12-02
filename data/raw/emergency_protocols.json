@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "protocol_code": "MAJOR_ACCIDENT",
+    "emergency_type": "major_accident",
+    "default_severity": "critical",
+    "description": "Collision involving multiple vehicles with possible injuries on a major corridor.",
+    "steps": [
+      "Verify exact location using GPS and nearest intersection identifier.",
+      "Dispatch police and ambulance units to the scene.",
+      "Secure the scene by controlling nearby traffic signals and creating a safety buffer.",
+      "Notify the nearest hospital if injuries are reported or suspected.",
+      "Log incident details into the central incident management system."
+    ],
+    "notify_services": ["police", "ambulance", "najm"],
+    "max_response_time_minutes": 10,
+    "requires_manual_confirmation": false
+  },
+  {
+    "id": 2,
+    "protocol_code": "DELAYED_EMERGENCY_VEHICLE",
+    "emergency_type": "delayed_emergency_vehicle",
+    "default_severity": "high",
+    "description": "An ambulance, fire truck, or police vehicle is significantly delayed by congestion.",
+    "steps": [
+      "Identify blocked segments on the planned emergency route.",
+      "Request signal priority and green wave along an alternate path when feasible.",
+      "Notify the emergency dispatch center with updated estimated time of arrival.",
+      "Coordinate with police units to clear blocking vehicles in front of the emergency vehicle."
+    ],
+    "notify_services": ["ambulance", "police", "traffic_control_center"],
+    "max_response_time_minutes": 5,
+    "requires_manual_confirmation": false
+  },
+  {
+    "id": 3,
+    "protocol_code": "FIRE_OR_SMOKE_NEAR_ROAD",
+    "emergency_type": "fire_or_smoke",
+    "default_severity": "high",
+    "description": "Presence of smoke or fire near the roadway detected by sensors or cameras.",
+    "steps": [
+      "Confirm smoke or fire levels using camera feeds and sensor data.",
+      "Block or partially close the affected segment and reroute all non-emergency traffic.",
+      "Dispatch fire department and ambulance to the scene.",
+      "Keep emergency lane free using Traffic Light Agent coordination and manual overrides if needed."
+    ],
+    "notify_services": ["fire_department", "ambulance", "police"],
+    "max_response_time_minutes": 8,
+    "requires_manual_confirmation": true
+  },
+  {
+    "id": 4,
+    "protocol_code": "FLOODING_ROAD",
+    "emergency_type": "flooding_road",
+    "default_severity": "medium",
+    "description": "Road segment partially or fully flooded, posing risk to vehicles and pedestrians.",
+    "steps": [
+      "Mark flooded road segments as closed in the knowledge graph and routing engine.",
+      "Reroute vehicles away from flooded areas using alternate corridors.",
+      "Coordinate with municipal services for drainage and cleanup.",
+      "Broadcast alerts to drivers through variable message signs and in-vehicle systems."
+    ],
+    "notify_services": ["municipality", "police"],
+    "max_response_time_minutes": 20,
+    "requires_manual_confirmation": true
+  },
+  {
+    "id": 5,
+    "protocol_code": "MINOR_ACCIDENT",
+    "emergency_type": "minor_accident",
+    "default_severity": "medium",
+    "description": "Two-vehicle collision with no serious injuries but potential lane blockage.",
+    "steps": [
+      "Verify that there are no serious injuries using sensor data or manual confirmation.",
+      "Advise drivers to move vehicles to the shoulder if safe.",
+      "Adjust nearby traffic signal timings to prevent spillback and long queues.",
+      "Dispatch tow truck if any vehicle is not drivable."
+    ],
+    "notify_services": ["police", "najm"],
+    "max_response_time_minutes": 15,
+    "requires_manual_confirmation": false
+  }
+]

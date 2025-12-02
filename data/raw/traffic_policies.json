@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "policy_code": "EMERGENCY_PRIORITY_HIGH",
+    "category": "emergency_priority",
+    "applicable_severity": "high",
+    "description": "When an emergency vehicle is detected within 200 meters of an intersection and queues are long, extend the green phase on its approach and shorten conflicting phases for 3 cycles.",
+    "priority_rank": 1,
+    "related_incident_types": ["emergency_delay", "accident"],
+    "time_window": "all_day",
+    "applies_to_roads": ["Haram Road", "Hospital Street", "Airport Road"]
+  },
+  {
+    "id": 2,
+    "policy_code": "EMERGENCY_PRIORITY_MEDIUM",
+    "category": "emergency_priority",
+    "applicable_severity": "medium",
+    "description": "When an emergency vehicle is approaching with moderate congestion, extend green time on the main approach for 2 cycles while maintaining minimum service for side streets.",
+    "priority_rank": 2,
+    "related_incident_types": ["emergency_delay"],
+    "time_window": "morning_peak",
+    "applies_to_roads": ["Ring Road East", "Ring Road West"]
+  },
+  {
+    "id": 3,
+    "policy_code": "EMERGENCY_PRIORITY_LOW",
+    "category": "emergency_priority",
+    "applicable_severity": "low",
+    "description": "Under low congestion, give normal green but avoid unnecessary stops for approaching emergency vehicles by reducing red time when possible.",
+    "priority_rank": 3,
+    "related_incident_types": ["emergency_delay"],
+    "time_window": "night",
+    "applies_to_roads": ["King Road", "Corniche Road"]
+  },
+  {
+    "id": 4,
+    "policy_code": "CONGESTION_MITIGATION_HIGH",
+    "category": "congestion_mitigation",
+    "applicable_severity": "high",
+    "description": "If average speed on a segment drops below 10 km/h and density is high, increase green time for the congested approach by 20 seconds for the next 3 cycles.",
+    "priority_rank": 1,
+    "related_incident_types": ["congestion"],
+    "time_window": "evening_peak",
+    "applies_to_roads": ["King Road", "Market Road", "Industrial Road"]
+  },
+  {
+    "id": 5,
+    "policy_code": "CONGESTION_MITIGATION_MEDIUM",
+    "category": "congestion_mitigation",
+    "applicable_severity": "medium",
+    "description": "If average speed is between 10 and 25 km/h with medium queues, slightly increase green time for the main movement and monitor for improvement.",
+    "priority_rank": 2,
+    "related_incident_types": ["congestion", "event_crowd"],
+    "time_window": "all_day",
+    "applies_to_roads": ["Tahlia Street", "Corniche Road"]
+  },
+  {
+    "id": 6,
+    "policy_code": "INCIDENT_BLOCKAGE_FULL",
+    "category": "incident_blockage",
+    "applicable_severity": "high",
+    "description": "If a road segment is fully blocked due to an incident, set signal plans to prevent vehicles from entering the blocked segment and direct them to predefined detour routes.",
+    "priority_rank": 1,
+    "related_incident_types": ["accident", "flooding", "fire"],
+    "time_window": "all_day",
+    "applies_to_roads": ["Old City Road", "Industrial Road"]
+  },
+  {
+    "id": 7,
+    "policy_code": "INCIDENT_BLOCKAGE_PARTIAL",
+    "category": "incident_blockage",
+    "applicable_severity": "medium",
+    "description": "If one lane is blocked but others are open, reduce green time for the affected approach and encourage diversion through alternate corridors.",
+    "priority_rank": 2,
+    "related_incident_types": ["roadwork", "breakdown"],
+    "time_window": "midday",
+    "applies_to_roads": ["Market Road", "Tech Park Road"]
+  },
+  {
+    "id": 8,
+    "policy_code": "PEDESTRIAN_SAFETY_SCHOOL",
+    "category": "pedestrian_safety",
+    "applicable_severity": "medium",
+    "description": "During school start and end times, increase pedestrian crossing time and reduce green time for through traffic near schools to protect vulnerable users.",
+    "priority_rank": 2,
+    "related_incident_types": ["pedestrian_crossing"],
+    "time_window": "morning_peak",
+    "applies_to_roads": ["University Avenue"]
+  },
+  {
+    "id": 9,
+    "policy_code": "NIGHT_MODE_LOW_DEMAND",
+    "category": "night_mode",
+    "applicable_severity": "low",
+    "description": "During low demand night hours, switch to vehicle-actuated control and flashing mode when no vehicles are detected for a configurable period.",
+    "priority_rank": 3,
+    "related_incident_types": ["none"],
+    "time_window": "night",
+    "applies_to_roads": ["Corniche Road", "Seaside Road"]
+  },
+  {
+    "id": 10,
+    "policy_code": "WEATHER_ADAPTATION_RAIN",
+    "category": "weather_adaptation",
+    "applicable_severity": "high",
+    "description": "During heavy rain or flooding alerts, reduce maximum permitted speed and extend amber and all-red phases to account for longer braking distances.",
+    "priority_rank": 1,
+    "related_incident_types": ["flooding", "weather_hazard"],
+    "time_window": "all_day",
+    "applies_to_roads": ["Old City Road", "Ring Road East", "Ring Road West"]
+  },
+  {
+    "id": 11,
+    "policy_code": "EVENT_MANAGEMENT_STADIUM",
+    "category": "event_management",
+    "applicable_severity": "medium",
+    "description": "Around stadiums or event venues, before and after events, modify signal timings to prioritize exit routes and public transport corridors.",
+    "priority_rank": 2,
+    "related_incident_types": ["event_crowd", "congestion"],
+    "time_window": "event_window",
+    "applies_to_roads": ["Seaside Road", "Ring Road West"]
+  },
+  {
+    "id": 12,
+    "policy_code": "WORK_ZONE_MANAGEMENT",
+    "category": "work_zone_management",
+    "applicable_severity": "medium",
+    "description": "When work zones are active, update signal phases to remove closed lanes and rebalance timings for remaining movements to avoid spillback.",
+    "priority_rank": 2,
+    "related_incident_types": ["roadwork"],
+    "time_window": "midday",
+    "applies_to_roads": ["Industrial Road", "Market Road"]
+  }
+]

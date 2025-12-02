@@ -1,0 +1,279 @@
+[
+  {
+    "id":1,
+    "protocol_code":"MAJOR_ACCIDENT",
+    "emergency_type":"major_accident",
+    "default_severity":"critical",
+    "description":"Collision involving multiple vehicles with possible injuries on a major corridor.",
+    "steps":[
+      "Verify exact location using GPS and nearest intersection identifier.",
+      "Dispatch police and ambulance units to the scene.",
+      "Secure the scene by controlling nearby traffic signals and creating a safety buffer.",
+      "Notify the nearest hospital if injuries are reported or suspected.",
+      "Log incident details into the central incident management system."
+    ],
+    "notify_services":[
+      "police",
+      "ambulance",
+      "najm"
+    ],
+    "max_response_time_minutes":10,
+    "requires_manual_confirmation":false,
+    "description_cleaned":"collision involving multiple vehicles with possible injuries on a major corridor",
+    "tokens":[
+      "collision",
+      "involving",
+      "multiple",
+      "vehicles",
+      "with",
+      "possible",
+      "injuries",
+      "on",
+      "a",
+      "major",
+      "corridor"
+    ],
+    "tokens_clean":[
+      "collision",
+      "involving",
+      "multiple",
+      "vehicles",
+      "possible",
+      "injuries",
+      "major",
+      "corridor"
+    ],
+    "tokens_lemmatized":[
+      "collision",
+      "involving",
+      "multiple",
+      "vehicle",
+      "possible",
+      "injury",
+      "major",
+      "corridor"
+    ],
+    "text_processed":"collision involving multiple vehicle possible injury major corridor"
+  },
+  {
+    "id":2,
+    "protocol_code":"DELAYED_EMERGENCY_VEHICLE",
+    "emergency_type":"delayed_emergency_vehicle",
+    "default_severity":"high",
+    "description":"An ambulance, fire truck, or police vehicle is significantly delayed by congestion.",
+    "steps":[
+      "Identify blocked segments on the planned emergency route.",
+      "Request signal priority and green wave along an alternate path when feasible.",
+      "Notify the emergency dispatch center with updated estimated time of arrival.",
+      "Coordinate with police units to clear blocking vehicles in front of the emergency vehicle."
+    ],
+    "notify_services":[
+      "ambulance",
+      "police",
+      "traffic_control_center"
+    ],
+    "max_response_time_minutes":5,
+    "requires_manual_confirmation":false,
+    "description_cleaned":"an ambulance fire truck or police vehicle is significantly delayed by congestion",
+    "tokens":[
+      "an",
+      "ambulance",
+      "fire",
+      "truck",
+      "or",
+      "police",
+      "vehicle",
+      "is",
+      "significantly",
+      "delayed",
+      "by",
+      "congestion"
+    ],
+    "tokens_clean":[
+      "ambulance",
+      "fire",
+      "truck",
+      "police",
+      "vehicle",
+      "significantly",
+      "delayed",
+      "congestion"
+    ],
+    "tokens_lemmatized":[
+      "ambulance",
+      "fire",
+      "truck",
+      "police",
+      "vehicle",
+      "significantly",
+      "delayed",
+      "congestion"
+    ],
+    "text_processed":"ambulance fire truck police vehicle significantly delayed congestion"
+  },
+  {
+    "id":3,
+    "protocol_code":"FIRE_OR_SMOKE_NEAR_ROAD",
+    "emergency_type":"fire_or_smoke",
+    "default_severity":"high",
+    "description":"Presence of smoke or fire near the roadway detected by sensors or cameras.",
+    "steps":[
+      "Confirm smoke or fire levels using camera feeds and sensor data.",
+      "Block or partially close the affected segment and reroute all non-emergency traffic.",
+      "Dispatch fire department and ambulance to the scene.",
+      "Keep emergency lane free using Traffic Light Agent coordination and manual overrides if needed."
+    ],
+    "notify_services":[
+      "fire_department",
+      "ambulance",
+      "police"
+    ],
+    "max_response_time_minutes":8,
+    "requires_manual_confirmation":true,
+    "description_cleaned":"presence of smoke or fire near the roadway detected by sensors or cameras",
+    "tokens":[
+      "presence",
+      "of",
+      "smoke",
+      "or",
+      "fire",
+      "near",
+      "the",
+      "roadway",
+      "detected",
+      "by",
+      "sensors",
+      "or",
+      "cameras"
+    ],
+    "tokens_clean":[
+      "presence",
+      "smoke",
+      "fire",
+      "near",
+      "roadway",
+      "detected",
+      "sensors",
+      "cameras"
+    ],
+    "tokens_lemmatized":[
+      "presence",
+      "smoke",
+      "fire",
+      "near",
+      "roadway",
+      "detected",
+      "sensor",
+      "camera"
+    ],
+    "text_processed":"presence smoke fire near roadway detected sensor camera"
+  },
+  {
+    "id":4,
+    "protocol_code":"FLOODING_ROAD",
+    "emergency_type":"flooding_road",
+    "default_severity":"medium",
+    "description":"Road segment partially or fully flooded, posing risk to vehicles and pedestrians.",
+    "steps":[
+      "Mark flooded road segments as closed in the knowledge graph and routing engine.",
+      "Reroute vehicles away from flooded areas using alternate corridors.",
+      "Coordinate with municipal services for drainage and cleanup.",
+      "Broadcast alerts to drivers through variable message signs and in-vehicle systems."
+    ],
+    "notify_services":[
+      "municipality",
+      "police"
+    ],
+    "max_response_time_minutes":20,
+    "requires_manual_confirmation":true,
+    "description_cleaned":"road segment partially or fully flooded posing risk to vehicles and pedestrians",
+    "tokens":[
+      "road",
+      "segment",
+      "partially",
+      "or",
+      "fully",
+      "flooded",
+      "posing",
+      "risk",
+      "to",
+      "vehicles",
+      "and",
+      "pedestrians"
+    ],
+    "tokens_clean":[
+      "road",
+      "segment",
+      "partially",
+      "fully",
+      "flooded",
+      "posing",
+      "risk",
+      "vehicles",
+      "pedestrians"
+    ],
+    "tokens_lemmatized":[
+      "road",
+      "segment",
+      "partially",
+      "fully",
+      "flooded",
+      "posing",
+      "risk",
+      "vehicle",
+      "pedestrian"
+    ],
+    "text_processed":"road segment partially fully flooded posing risk vehicle pedestrian"
+  },
+  {
+    "id":5,
+    "protocol_code":"MINOR_ACCIDENT",
+    "emergency_type":"minor_accident",
+    "default_severity":"medium",
+    "description":"Two-vehicle collision with no serious injuries but potential lane blockage.",
+    "steps":[
+      "Verify that there are no serious injuries using sensor data or manual confirmation.",
+      "Advise drivers to move vehicles to the shoulder if safe.",
+      "Adjust nearby traffic signal timings to prevent spillback and long queues.",
+      "Dispatch tow truck if any vehicle is not drivable."
+    ],
+    "notify_services":[
+      "police",
+      "najm"
+    ],
+    "max_response_time_minutes":15,
+    "requires_manual_confirmation":false,
+    "description_cleaned":"twovehicle collision with no serious injuries but potential lane blockage",
+    "tokens":[
+      "twovehicle",
+      "collision",
+      "with",
+      "no",
+      "serious",
+      "injuries",
+      "but",
+      "potential",
+      "lane",
+      "blockage"
+    ],
+    "tokens_clean":[
+      "twovehicle",
+      "collision",
+      "serious",
+      "injuries",
+      "potential",
+      "lane",
+      "blockage"
+    ],
+    "tokens_lemmatized":[
+      "twovehicle",
+      "collision",
+      "serious",
+      "injury",
+      "potential",
+      "lane",
+      "blockage"
+    ],
+    "text_processed":"twovehicle collision serious injury potential lane blockage"
+  }
+]
