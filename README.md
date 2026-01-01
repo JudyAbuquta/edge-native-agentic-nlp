@@ -97,4 +97,4 @@ These results demonstrate that:
 ## Contributers
 - [Celine Al Harake](https://github.com/CelineHarakee)
 - [Layal Canoe](https://github.com/layalcanoe)
-- Judy Abu Quta
+- [Judy Abuquta](https://github.com/JudyAbuquta)
